@@ -5,20 +5,20 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")  # ⚠️ Required
-    API_HASH  = os.environ.get("API_HASH", "") # ⚠️ Required
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") # ⚠️ Required
-    FORCE_SUB = os.environ.get('FORCE_SUB', '') # ⚠️ Required
+    API_ID    = os.environ.get("API_ID", "22349465")  # ⚠️ Required
+    API_HASH  = os.environ.get("API_HASH", "3732e079c4125690226d8e7b4e028ca4") # ⚠️ Required
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7979741831:AAGrWGFKr8pCqApXPvWIaeH0uWjQNgHQ33g") # ⚠️ Required
+    FORCE_SUB = os.environ.get(AUTH_CHANNEL) # ⚠️ Required
     AUTH_CHANNEL = int(FORCE_SUB) if FORCE_SUB and id_pattern.search(
     FORCE_SUB) else None
    
     # database config
-    DB_URL  = os.environ.get("DB_URL", "")  # ⚠️ Required
-    DB_NAME  = os.environ.get("DB_NAME","SnowEncoderBot") 
+    DB_URL  = os.environ.get("DB_URL", "mongodb+srv://nishantpatel877000:qg5uYXsN6UG1cOX3@cluster0.hhhw2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")  # ⚠️ Required
+    DB_NAME  = os.environ.get("DB_NAME","mongodb") 
 
     # Other Configs 
-    ADMIN = int(os.environ.get("ADMIN", "0")) # ⚠️ Required
-    LOG_CHANNEL = int(os.environ.get('LOG_CHANNEL', '0')) # ⚠️ Required
+    ADMIN = int(os.environ.get("ADMIN", "905710386")) # ⚠️ Required
+    LOG_CHANNEL = int(os.environ.get('LOG_CHANNEL', '-1001566860282')) # ⚠️ Required
     BOT_UPTIME = BOT_UPTIME  = time.time()
     START_PIC = os.environ.get("START_PIC", "https://graph.org/file/15e82d7e665eccc8bd9c5.jpg")
 
