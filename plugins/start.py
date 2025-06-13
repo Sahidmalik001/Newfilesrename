@@ -14,7 +14,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 async def _(bot: Client, cmd: Message):
     await handle_user_status(bot, cmd)
 
-@Client.on_message((filters.private | filters.group) & filters.command('start'))
+@Client.on_message((filters.private | filters.group) & filters.command('start') & filters.user(Config.ADMIN))
 async def Handle_StartMsg(bot:Client, msg:Message):
 
     Snowdev = await msg.reply_text(text= '**Please Wait...**', reply_to_message_id=msg.id)
