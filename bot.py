@@ -27,7 +27,9 @@ class Bot (Client):
             api_id=Config.API_ID,
             api_hash=Config.API_HASH,
             bot_token=Config.BOT_TOKEN,
-            plugins={'root': 'plugins'}
+            plugins={'root': 'plugins'},
+            sleep_threshold=10,
+            max_concurrent_transmissions=4            
         )
 
     async def start(self):
